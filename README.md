@@ -419,6 +419,22 @@ Possible enhancements:
 - Logging system
 - Multi-stage Docker builds
 
+## ✅ Swagger API Documentation
+
+Integrated Swagger UI using Flasgger for interactive API visualization and endpoint testing.
+
+### Swagger Features
+- Interactive API documentation
+- Live endpoint testing
+- Request/response visualization
+- Developer-friendly API interface
+
+### Access Swagger UI
+
+```text
+http://127.0.0.1:5000/apidocs
+```
+
 ---
 
 # 👨‍💻 Author

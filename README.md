@@ -1,43 +1,54 @@
-🚀 Python with DevOps CI/CD
+# 🚀 Python with DevOps CI/CD
 
 A practical hands-on CI/CD project built using Python Flask, GitHub Actions, Docker-ready architecture, Environment Variables, and Deployment Configuration.
 
 This project demonstrates a complete modern DevOps workflow including:
 
-Source Control Management using Git & GitHub
-Continuous Integration using GitHub Actions
-Automated Testing using Pytest
-Secure Configuration using Environment Variables & GitHub Secrets
-Containerization using Docker
-Deployment-ready configuration using Heroku
-📌 Project Overview
+- Source Control Management using Git & GitHub
+- Continuous Integration using GitHub Actions
+- Automated Testing using Pytest
+- Secure Configuration using Environment Variables & GitHub Secrets
+- Containerization using Docker
+- Deployment-ready configuration using Heroku
+
+---
+
+# 📌 Project Overview
 
 This project simulates a real-world CI/CD implementation for a Python-based web application.
 
-The application is a simple Flask API called TaskFlow API, which supports:
-
-Health monitoring
-Environment configuration validation
-Task management APIs
+The application is a simple Flask API called **TaskFlow API**, which supports:
+- Health monitoring
+- Environment configuration validation
+- Task management APIs
 
 The main focus of this project is demonstrating:
+- CI/CD pipeline automation
+- Automated testing
+- DevOps workflows
+- Deployment preparation
+- Containerization concepts
 
-CI/CD pipeline automation
-Automated testing
-DevOps workflows
-Deployment preparation
-Containerization concepts
-🏗️ Tech Stack
-Technology	Purpose
-Python 3.10	Backend Language
-Flask	Web Framework
-Pytest	Automated Testing
-GitHub Actions	Continuous Integration
-Docker	Containerization
-Gunicorn	Production WSGI Server
-Heroku	Deployment Configuration
-Git & GitHub	Source Control
-📂 Project Structure
+---
+
+# 🏗️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Python 3.10 | Backend Language |
+| Flask | Web Framework |
+| Pytest | Automated Testing |
+| GitHub Actions | Continuous Integration |
+| Docker | Containerization |
+| Gunicorn | Production WSGI Server |
+| Heroku | Deployment Configuration |
+| Git & GitHub | Source Control |
+
+---
+
+# 📂 Project Structure
+
+```bash
 Python-with-Devops-CI-CD/
 │
 ├── .github/
@@ -56,95 +67,173 @@ Python-with-Devops-CI-CD/
 ├── .gitignore
 ├── .env
 └── README.md
-⚙️ Features Implemented
-✅ Flask REST API
-Health endpoint
-Environment validation endpoint
-Task management endpoints
-✅ Automated Testing
+```
+
+---
+
+# ⚙️ Features Implemented
+
+## ✅ Flask REST API
+- Health endpoint
+- Environment validation endpoint
+- Task management endpoints
+
+---
+
+## ✅ Automated Testing
 
 Implemented automated test cases using Pytest.
 
-Tests Included
-Home route validation
-Health endpoint validation
-✅ Continuous Integration (CI)
+### Tests Included
+- Home route validation
+- Health endpoint validation
+
+---
+
+## ✅ Continuous Integration (CI)
 
 Implemented automated CI pipeline using GitHub Actions.
 
-Pipeline Features
-Trigger on every push
-Install dependencies
-Execute automated tests
-Validate application integrity
-✅ Environment Variables & Secrets Management
+### Pipeline Features
+- Trigger on every push
+- Install dependencies
+- Execute automated tests
+- Validate application integrity
+
+---
+
+## ✅ Environment Variables & Secrets Management
 
 Implemented secure configuration using:
+- `.env`
+- GitHub Secrets
 
-.env
-GitHub Secrets
-Environment Variables Used
-Variable	Purpose
-APP_ENV	Application environment
-SECRET_KEY	Secret configuration
-✅ Docker-Ready Architecture
+### Environment Variables Used
+
+| Variable | Purpose |
+|---|---|
+| APP_ENV | Application environment |
+| SECRET_KEY | Secret configuration |
+
+---
+
+## ✅ Docker-Ready Architecture
 
 Created Dockerfile for containerized deployment.
 
-Docker Features
-Python base image
-Dependency installation
-Runtime packaging
-Deployment-ready configuration
-✅ Heroku Deployment Configuration
+### Docker Features
+- Python base image
+- Dependency installation
+- Runtime packaging
+- Deployment-ready configuration
+
+---
+
+## ✅ Heroku Deployment Configuration
 
 Prepared deployment configuration using:
+- Procfile
+- runtime.txt
 
-Procfile
-runtime.txt
-🚀 API Endpoints
-Endpoint	Method	Description
-/	GET	Application status
-/health	GET	Health monitoring
-/env	GET	Environment validation
-/tasks	GET	Retrieve tasks
-/tasks	POST	Add new task
-🔧 Installation & Setup
-1️⃣ Clone Repository
+---
+
+# 🚀 API Endpoints
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/` | GET | Application status |
+| `/health` | GET | Health monitoring |
+| `/env` | GET | Environment validation |
+| `/tasks` | GET | Retrieve tasks |
+| `/tasks` | POST | Add new task |
+
+---
+
+# 🔧 Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/mehraj28/Python-with-Devops-CI-CD.git
-2️⃣ Navigate to Project
+```
+
+---
+
+## 2️⃣ Navigate to Project
+
+```bash
 cd Python-with-Devops-CI-CD
-3️⃣ Create Virtual Environment
-Windows
+```
+
+---
+
+## 3️⃣ Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
-Activate Environment
+```
+
+### Activate Environment
+
+```bash
 venv\Scripts\activate
-4️⃣ Install Dependencies
+```
+
+---
+
+## 4️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ Running the Application
+```
+
+---
+
+# ▶️ Running the Application
 
 Start Flask server:
 
+```bash
 python app.py
+```
 
 Application runs at:
 
+```text
 http://127.0.0.1:5000
-🧪 Running Automated Tests
+```
+
+---
+
+# 🧪 Running Automated Tests
 
 Execute test suite:
 
+```bash
 pytest tests/
+```
 
 Expected output:
 
+```bash
 2 passed
-⚡ GitHub Actions CI Pipeline
+```
+
+---
+
+# ⚡ GitHub Actions CI Pipeline
 
 CI pipeline is configured using:
 
+```bash
 .github/workflows/python-ci.yml
-Pipeline Workflow
+```
+
+### Pipeline Workflow
+
+```text
 Developer Pushes Code
         ↓
 GitHub Actions Triggered
@@ -154,41 +243,82 @@ Install Dependencies
 Run Automated Tests
         ↓
 Build Validation Successful
-🔐 Environment Variables
+```
 
-Create .env file:
+---
 
+# 🔐 Environment Variables
+
+Create `.env` file:
+
+```env
 APP_ENV=development
 SECRET_KEY=mysecretkey123
-🔒 GitHub Secrets
+```
+
+---
+
+# 🔒 GitHub Secrets
 
 Secrets configured in:
 
+```text
 GitHub Repository
 → Settings
 → Secrets and Variables
 → Actions
-Secrets Used
-Secret	Purpose
-APP_ENV	Deployment environment
-SECRET_KEY	Secure secret configuration
-🐳 Docker Configuration
+```
+
+### Secrets Used
+
+| Secret | Purpose |
+|---|---|
+| APP_ENV | Deployment environment |
+| SECRET_KEY | Secure secret configuration |
+
+---
+
+# 🐳 Docker Configuration
 
 Dockerfile created for container-ready deployment.
 
-Build Docker Image
+## Build Docker Image
+
+```bash
 docker build -t taskflow-api .
-Run Docker Container
+```
+
+## Run Docker Container
+
+```bash
 docker run -p 5000:5000 taskflow-api
-☁️ Heroku Deployment Configuration
+```
+
+---
+
+# ☁️ Heroku Deployment Configuration
 
 Deployment-ready files included:
 
-Procfile
+## Procfile
+
+```text
 web: gunicorn app:app
-runtime.txt
+```
+
+---
+
+## runtime.txt
+
+```text
 python-3.10.0
-📈 CI/CD Workflow Architecture
+```
+
+---
+
+# 📈 CI/CD Workflow Architecture
+
+```text
 Developer Push
       ↓
 GitHub Repository
@@ -202,83 +332,117 @@ Run Automated Tests
 Validate Build
       ↓
 Deployment-Ready Application
-🩺 Health Monitoring
+```
+
+---
+
+# 🩺 Health Monitoring
 
 Health endpoint:
 
+```bash
 /health
+```
 
 Example response:
 
+```json
 {
   "status": "healthy"
 }
+```
 
 This endpoint is useful for:
+- CI/CD validation
+- Kubernetes readiness checks
+- Monitoring systems
+- Load balancer health checks
 
-CI/CD validation
-Kubernetes readiness checks
-Monitoring systems
-Load balancer health checks
-🛠️ Troubleshooting
-Common Issues
-Pytest Not Detecting Tests
+---
+
+# 🛠️ Troubleshooting
+
+## Common Issues
+
+### Pytest Not Detecting Tests
 
 Solution:
 
+```bash
 pytest tests/
-Git Push Rejected
+```
+
+---
+
+### Git Push Rejected
 
 Solution:
 
+```bash
 git pull origin main --allow-unrelated-histories
-Environment Variables Not Loading
+```
+
+---
+
+### Environment Variables Not Loading
 
 Ensure:
+- `.env` exists
+- `load_dotenv()` is added
+- variable names match correctly
 
-.env exists
-load_dotenv() is added
-variable names match correctly
-🎯 Learning Outcomes
+---
+
+# 🎯 Learning Outcomes
 
 By completing this project, you will learn:
 
-CI/CD fundamentals
-GitHub Actions automation
-Automated testing workflows
-Docker containerization concepts
-Secure secrets management
-Deployment architecture
-DevOps best practices
-📚 Future Improvements
+- CI/CD fundamentals
+- GitHub Actions automation
+- Automated testing workflows
+- Docker containerization concepts
+- Secure secrets management
+- Deployment architecture
+- DevOps best practices
+
+---
+
+# 📚 Future Improvements
 
 Possible enhancements:
+- Kubernetes deployment
+- AWS/GCP deployment
+- Jenkins pipeline integration
+- Database integration
+- API authentication
+- Production monitoring
+- Logging system
+- Multi-stage Docker builds
 
-Kubernetes deployment
-AWS/GCP deployment
-Jenkins pipeline integration
-Database integration
-API authentication
-Production monitoring
-Logging system
-Multi-stage Docker builds
-👨‍💻 Author
+---
+
+# 👨‍💻 Author
 
 Mehraj
 
-GitHub Repository:
+GitHub:
+https://github.com/mehraj28
 
-Python-with-Devops-CI-CD Repository
+Repository:
+https://github.com/mehraj28/Python-with-Devops-CI-CD
 
-⭐ Conclusion
+---
+
+# ⭐ Conclusion
 
 This project demonstrates a practical implementation of modern CI/CD workflows using Python and DevOps practices.
 
 It covers:
+- Continuous Integration
+- Automated Testing
+- Environment Management
+- Secure Configuration
+- Containerization
+- Deployment Preparation
 
-Continuous Integration
-Automated Testing
-Environment Management
-Secure Configuration
-Containerization
-Deployment Preparation
+The implementation reflects real-world DevOps engineering workflows and deployment-ready application architecture.

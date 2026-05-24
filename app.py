@@ -1,4 +1,11 @@
 from flask import Flask, jsonify, request
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+APP_ENV=os.getenv('APP_ENV')
+SECRET_KEY=os.getenv('SECRET_KEY')
 
 app = Flask(__name__)
 
@@ -25,6 +32,13 @@ def add_task():
 @app.route('/health')
 def health():
     return jsonify({"status": "healthy"})
+
+@app.route('/env')
+def env():
+    return jsonify({
+        "environment": APP_ENV,
+        "secret_loaded": SECRET_KEY is not None
+    })
 
 if __name__ == '__main__':
     app.run(debug=True)
